@@ -39,6 +39,14 @@ public class ApplicationTest extends FunctionalTest {
     }
 
     @Test
+    public void testThatChangedMindPageWorks() {
+        Response response = GET("/changedMind");
+        assertIsOk(response);
+        assertContentType("text/html", response);
+        assertCharset(play.Play.defaultWebEncoding, response);
+    }
+
+    @Test
     public void testPushWithEligibleCheckin() throws IOException {
 
         ConnectedUser.all().delete();

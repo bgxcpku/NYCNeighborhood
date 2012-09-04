@@ -6,6 +6,8 @@
 GET     /                                       Application.index
 GET     /connected                              Application.connected
 GET     /about                                  Application.about
+*       /connected                              Application.connected
+*       /changedMind                            Application.changedMind
 *       /psh                                    Application.psh
 *       /auth                                   Application.authenticate
 *       /callback                               Application.handleCallback

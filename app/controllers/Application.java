@@ -43,6 +43,10 @@ public class Application extends Controller {
         render();
     }
 
+    public static void changedMind() {
+        render();
+    }
+
     /**
      * First part of the foursquare authentification & authorization
      */
@@ -82,8 +86,7 @@ public class Application extends Controller {
             connected();
 
         } catch (FoursquareApiException e) {
-            e.printStackTrace();
-            // TODO: Error handling
+
         }
     }
 
