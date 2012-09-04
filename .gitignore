@@ -14,3 +14,7 @@ modules/cobertura-2.4/CHANGELOG
 modules/cobertura-2.4/COPYING
 
 modules/cobertura-2.4/README
+
+*.ser
+modules
+
