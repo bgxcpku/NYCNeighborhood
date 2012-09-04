@@ -1,0 +1,16 @@
+
+.DS_Store
+
+*.iml
+
+*.ipr
+
+*.iws
+
+*.jar
+
+modules/cobertura-2.4/CHANGELOG
+
+modules/cobertura-2.4/COPYING
+
+modules/cobertura-2.4/README
