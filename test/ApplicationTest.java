@@ -23,6 +23,14 @@ public class ApplicationTest extends FunctionalTest {
     }
 
     @Test
+    public void testThatPolicyPageWorks() {
+        Response response = GET("/connected");
+        assertIsOk(response);
+        assertContentType("text/html", response);
+        assertCharset(play.Play.defaultWebEncoding, response);
+    }
+
+    @Test
     public void testThatConnectedPageWorks() {
         Response response = GET("/connected");
         assertIsOk(response);

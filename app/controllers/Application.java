@@ -11,6 +11,7 @@ import fi.foyt.foursquare.api.FoursquareApi;
 import fi.foyt.foursquare.api.FoursquareApiException;
 import models.ny.ConnectedUser;
 import models.streeteasy.AreaByLocation;
+import play.Logger;
 import play.libs.WS;
 import play.modules.guice.InjectSupport;
 import play.mvc.*;
@@ -44,6 +45,10 @@ public class Application extends Controller {
     }
 
     public static void changedMind() {
+        render();
+    }
+
+    public static void policy() {
         render();
     }
 
@@ -115,14 +120,14 @@ public class Application extends Controller {
         try{
             reply = URLEncoder.encode(reply, "UTF-8");
         }catch (UnsupportedEncodingException e){
-            e.printStackTrace();
+            Logger.error(e,"Impossible to encode your text");
             reply = "We%20have%20no%20idea%20where%20you%20are...sorry";
         }
 
         foursquareService.callReply(pushed.id,user.token,reply);
 
-        String replyUrl = URLHelper.buildReplyUrl(pushed.id, reply, user.token);
-        String replyAnswer =  WS.url(replyUrl).post().getString();
+        //String replyUrl = URLHelper.buildReplyUrl(pushed.id, reply, user.token);
+        //String replyAnswer =  WS.url(replyUrl).post().getString();
 
     }
 

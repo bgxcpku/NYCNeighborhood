@@ -13,9 +13,14 @@ import services.StreetEasyServicePlayImp;
 
 public class GuiceConfiguration extends GuiceSupport {
 
+    public GuiceConfiguration(){
+        super();
+    }
+
     @Override
-    protected Injector configure() {
-        return Guice.createInjector(new AbstractModule() {
+    public Injector configure() {
+        return Guice.createInjector(new NYCModule());
+        /*new AbstractModule() {
 
 
             @Override
@@ -29,6 +34,6 @@ public class GuiceConfiguration extends GuiceSupport {
                 bind(FoursquareService.class).to(FoursquareServicePlayImp.class).in(Singleton.class);
 
             }
-        });
+        }*/
     }
 }
