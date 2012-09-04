@@ -17,4 +17,5 @@ modules/cobertura-2.4/README
 
 *.ser
 modules
-
+test-result
+tmp
