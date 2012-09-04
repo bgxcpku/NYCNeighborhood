@@ -60,7 +60,11 @@ public class Application extends Controller {
         redirect(foursquareApi.getAuthenticationUrl());
     }
 
-    public static void handleCallback(String code) {
+    public static void handleCallback(String code, String error) {
+
+        if(ACCESS_DENIED.equals(error)){
+            changedMind();
+        }
 
         FoursquareApi foursquareApi = new FoursquareApi(FoursquareConfiguration.getInstance().getClientId(), FoursquareConfiguration.getInstance().getClientSecret(), FoursquareConfiguration.getInstance().getRedirectUrl());
 
@@ -130,5 +134,7 @@ public class Application extends Controller {
         //String replyAnswer =  WS.url(replyUrl).post().getString();
 
     }
+
+    public static final String ACCESS_DENIED = "access_denied";
 
 }
