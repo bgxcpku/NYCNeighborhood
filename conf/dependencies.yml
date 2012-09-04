@@ -1,0 +1,31 @@
+require:
+    - play
+    - play -> gae 1.4
+    - play -> cobertura 2.4
+    - play -> guice 1.2
+    - play -> siena 2.0.6:
+       exclude:
+           - com.google.appengine -> *
+    - com.google.code.gson -> gson 1.7.1
+    - com.google.guava -> guava 13.0
+    - fi.foyt -> foursquare-api 1.0.2:
+        exclude:
+            - com.google.appengine -> *
+            - javax.servlet -> *
+    - fi.foyt -> foursquare-api-gae 0.0.2:
+        exclude:
+            - com.google.appengine -> *
+            - javax.servlet -> *
+    - com.lbo -> 4sqre-model 0.1-beta
+
+repositories:
+    - foursquare-api:
+        type: iBiblio
+        root: "http://foursquare-api-java.googlecode.com/svn/repository"
+        contains:
+            - fi.foyt -> *
+    - github-lbo:
+        type:       http
+        artifact:   "http://cloud.github.com/downloads/laurentbouin/4sqre-model/[module]-[revision].[ext]"
+        contains:
+            - com.lbo -> *
