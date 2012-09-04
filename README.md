@@ -23,7 +23,7 @@ Before starting
 Guice Module for Play!
 ----------------------
 
-Don't forget to delete the "test" directory or will have errors :)
+Don't forget to delete the test directory from the guice module or will have errors :)
 
 Author
 -------
