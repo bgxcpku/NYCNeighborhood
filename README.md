@@ -5,6 +5,16 @@ A foursquare connected app showing the neighborhood's name of your checkin.
 
 http://nyneighborhood.appspot.com/
 
+This application use:
+
+   * [Play! Framework](http://www.playframework.org/)
+   * [Google App Engine](https://appengine.google.com)
+   * [Foursquare API](https://developer.foursquare.com/)
+   * [StreetEasy API](http://streeteasy.com/nyc/api/info)
+   * [Guice](http://code.google.com/p/google-guice/)
+   * [Foursquare API v2 for Java](http://code.google.com/p/foursquare-api-java/)
+   * [GSon](http://code.google.com/p/google-gson/)
+
 Before starting
 ---------------------
 
