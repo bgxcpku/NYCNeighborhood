@@ -24,6 +24,8 @@ Guice Module for Play!
 ----------------------
 
 [Guice Module Documentation](http://www.playframework.org/modules/guice-1.2/home)
+
+
 Don't forget to delete the test directory from the guice module or will have errors :)
 
 Author
